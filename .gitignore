@@ -1,0 +1,32 @@
+# Local scratch
+demo/
+tmp/
+.workbuddy/
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Cloudflare Workers
+.wrangler/
+*.wasm
+wrangler-install.log
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Secrets and logs
+.env
+.env.local
+.env.*.local
+*.log
+npm-debug.log*
+yarn-error.log*
+log/

@@ -1,0 +1,18 @@
+name = "edgetunnel-iran"
+main = "_worker.js"
+compatibility_date = "2025-11-04"
+# The ADMIN and KEY secrets live in the dashboard, so keep them across deploys.
+keep_vars = true
+
+# Record uncaught exceptions (including module-load failures) so an outage can be
+# diagnosed from the dashboard / telemetry API even when wrangler tail is blocked.
+[observability]
+enabled = true
+
+[[kv_namespaces]]
+binding = "KV"
+id = "YOUR_KV_NAMESPACE_ID"
+
+[vars]
+PRELOAD_RACE_DIAL = "1"
+PROXY_CONCURRENT_DIAL = "3"
