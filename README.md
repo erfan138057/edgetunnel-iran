@@ -3,6 +3,8 @@
 VLESS / Trojan / Shadowsocks over a Cloudflare Worker, tuned for Iranian lines, with the
 2026 TLS bypass recipe baked into every subscription node.
 
+Documentation also available in [Persian](README.fa.md).
+
 > **Before you do anything else:** **set your own password**, and never publish your worker URL, tokens or subscription link.
 > The `ADMIN` token, the `KEY` and the subscription token are the passwords of your deployment.
 > Full rules: [Privacy and security](#8-privacy-and-security-required).

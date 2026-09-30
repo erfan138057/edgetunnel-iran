@@ -23,9 +23,9 @@ jobs:
       - name: Syntax check
         run: node --check _worker.js
 
-      - name: English-only content (no CJK, Arabic/Persian or Cyrillic anywhere)
+      - name: English-only content (no CJK, Arabic/Persian or Cyrillic anywhere; README.fa.md excepted)
         run: |
-          hits=$(git ls-files | xargs -r grep -lP '[\x{4E00}-\x{9FFF}\x{3040}-\x{30FF}\x{AC00}-\x{D7AF}\x{0600}-\x{06FF}\x{0750}-\x{077F}\x{08A0}-\x{08FF}\x{0400}-\x{04FF}]' || true)
+          hits=$(git ls-files | grep -v '^README\.fa\.md$' | xargs -r grep -lP '[\x{4E00}-\x{9FFF}\x{3040}-\x{30FF}\x{AC00}-\x{D7AF}\x{0600}-\x{06FF}\x{0750}-\x{077F}\x{08A0}-\x{08FF}\x{0400}-\x{04FF}]' || true)
           if [ -n "$hits" ]; then
             echo "Non-English characters found in:"
             echo "$hits"
