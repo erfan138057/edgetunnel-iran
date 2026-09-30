@@ -113,4 +113,9 @@ GNU General Public License, version 2 - see [LICENSE](LICENSE).
 
 ## 12. Credits
 
-Core: `XTLS/Xray-core`. Recipe: the community finalmask / fingerprint method.
+Special thanks to the original creators this project builds on:
+
+- **[zizifn](https://github.com/zizifn)** - the original **EdgeTunnel** ([zizifn/edgetunnel](https://github.com/zizifn/edgetunnel), 2020): running V2ray inside the Cloudflare edge. Everything in this repository descends from that work.
+- **[patterniha](https://github.com/patterniha)** - the creator of **PattNG** ([patterniha/PattNG](https://github.com/patterniha/PattNG)) and PattN, the clients whose finalmask / fingerprint / cipher-suite recipe makes the 2026 bypass possible, and whose share-link format this subscription speaks.
+
+Also thanks to the maintainers of the extended edgetunnel line (`cmliu/edgetunnel`) and the v2rayNG / v2rayN upstreams (`2dust`), and to the core this worker runs on: `XTLS/Xray-core`.
